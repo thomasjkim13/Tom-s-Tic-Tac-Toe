@@ -14,6 +14,7 @@
 - As a user I want to see a message, ‘<username> lost the game’, when I lose
 - As a user I want to see a message, ‘DRAW’, when tie
 - As a user I want to be able to restart game (new game)
+- As a user I want to be able to sign out at the end of the game
 - As a user I want this game playable on both PC and mobile devices
 
 ### Wireframe
