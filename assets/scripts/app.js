@@ -10,4 +10,5 @@ $(() => {
   // your JS code goes here
   $('#sign-up').on('submit', gamesEvents.onSignUp)
   $('#sign-in').on('submit', gamesEvents.onSignIn)
+  $('#sign-out').on('click', gamesEvents.onSignOut)
 })
