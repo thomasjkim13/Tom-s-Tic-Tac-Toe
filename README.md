@@ -18,4 +18,4 @@
 
 ### Wireframe
 
-![wireframe](TicTiacToe.png)
+![TicTacToe](https://media.git.generalassemb.ly/user/35306/files/1b21be00-92ee-11eb-93d7-31340d3997a6)
