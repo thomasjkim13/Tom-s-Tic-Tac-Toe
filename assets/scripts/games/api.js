@@ -20,7 +20,6 @@ const signIn = function (data) {
 }
 
 const signOut = function () {
-  console.log('token is ', store.user.token)
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/sign-out',
@@ -30,8 +29,19 @@ const signOut = function () {
   })
 }
 
+const newGame = function () {
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + '/new-game',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
-  signOut
+  signOut,
+  newGame
 }

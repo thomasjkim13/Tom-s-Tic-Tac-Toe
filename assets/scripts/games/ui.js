@@ -11,7 +11,10 @@ const onSignUpFailure = function () {
 }
 
 const onSignInSuccess = function (response) {
-  // print response so we can see what it is
+  $('#sign-out').show()
+  $('#new-game').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
 
   // save user to our store object
   store.user = response.user
@@ -25,6 +28,12 @@ const onSignInFailure = function () {
 }
 
 const onSignOutSuccess = function () {
+  $('#sign-up').show()
+  $('#sign-in').show()
+
+  $('#sign-out').hide()
+  $('#new-game').hide()
+
   $('#message').text('You have signed out successfully!')
   $('#sign-out').trigger('reset')
   store.user = null
@@ -34,11 +43,17 @@ const onSignOutFailure = function () {
   $('#message').text('You failed signing out')
 }
 
+const onNewGameRefresh = function (response) {
+  $('new-game').trigger('reset')
+  store.user = response.user
+}
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
   onSignInSuccess,
   onSignInFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onNewGameRefresh
 }
