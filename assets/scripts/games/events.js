@@ -32,8 +32,10 @@ const onSignOut = function (event) {
 
 const onNewGame = function (event) {
   event.preventDefault()
+
   api.newGame()
     .then(ui.onNewGameRefresh)
+    .catch(ui.onNewGameFailure)
 }
 
 module.exports = {

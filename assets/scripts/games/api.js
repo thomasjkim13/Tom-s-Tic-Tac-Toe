@@ -28,11 +28,10 @@ const signOut = function () {
   })
 }
 
-const newGame = function (data) {
+const newGame = function () {
   return $.ajax({
     method: 'POST',
-    url: config.apiUrl + '/new-game',
-    data: data,
+    url: config.apiUrl + '/games',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
