@@ -13,44 +13,38 @@
     </head>
     
     <body>
-      <div class="container">
-       <h1>Tom's Tic Tac Toe</h1>
-       <p id="message"></p>
- 
-       <form id="sign-in">
-         <input type="email" name="credentials[email]" placeholder="email"> </br>
-         <input type="password" name="credentials[password]" placeholder="password"> </br>
-         <input type="submit" value="Sign In"/>
-       </form>
- 
-       <form id="sign-up">
-         <input type="email" name="credentials[email]" placeholder="email"> </br>
-         <input type="password" name="credentials[password]" placeholder="password"> </br>
-         <input type="password" name="credentials[password_confirmation]" placeholder="password  confirmation"> </br>
-         <input type="Submit" value="Sign Up">
-       </form>
- 
-       <button id='sign-out'> Sign Out </button>
-       <button id='new-game'> New Game </button>
-       
-       <div class="container-box" >
-         <div class="row" style="height: 150px; width: 600px;">
-           <div class="container col-4 col-md-4 box alt-color"> 1 </div>
-           <div class="container col-4 col-md-4 box alt-color"> 2 </div>
-           <div class="container col-4 col-md-4 box alt-color"> 3 </div>
-         </div>
-         <div class="row" style="height: 150px; width: 600px;">
-           <div class="container col-4 col-md-4 box alt-color"> 4 </div>
-           <div class="container col-4 col-md-4 box alt-color"> 5 </div>
-           <div class="container col-4 col-md-4 box alt-color"> 6 </div>
-         </div>
-         <div class="row" style="height: 150px; width: 600px;">
-           <div class="container col-4 ol-md-4 box alt-color"> 7 </div>
-           <div class="container col-4 col-md-4 box alt-color"> 8 </div>
-           <div class="container col-4 col-md-4 box alt-color"> 9 </div>
-         </div>
- 
-       </div>
-      </div>
+      <h1 class="row" id="header">Tom's Tic Tac Toe</h1>
+      <p id="message"></p>
+      <form class="row" id="sign-in">
+        <input type="email" name="credentials[email]" placeholder="email"> </br>
+        <input type="password" name="credentials[password]" placeholder="password"> </br>
+        <input type="submit" class="btn btn-outline-dark" value="Sign In"/>
+      </form>
+      <form class="row" id="sign-up">
+        <input type="email" name="credentials[email]" placeholder="email"> </br>
+        <input type="password" name="credentials[password]" placeholder="password"> </br>
+        <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation"><br>
+        <input type="Submit" class="btn btn-outline-dark" value="Sign Up">
+      </form>
+      
+      <section class="row" id='new-page'>
+        <button id='new-game' class="btn btn-outline-dark"> New Game </button>
+        <button id='sign-out' class="btn btn-outline-dark"> Sign Out </button>
+      </section>
+      <section class="container ">
+        <div class="row h-100 board">
+          <div class="col-4 col-md-4 box"> </div>
+          <div class="col-4 col-md-4 box"> </div>
+          <div class="col-4 col-md-4 box"> </div>
+        
+          <div class="col-4 col-md-4 box"> </div>
+          <div class="col-4 col-md-4 box"> </div>
+          <div class="col-4 col-md-4 box"> </div>
+        
+          <div class="col-4 col-md-4 box"> </div>
+          <div class="col-4 col-md-4 box"> </div>
+          <div class="col-4 col-md-4 box"> </div>
+        </div>
+      </section>
     </body>
 </html>

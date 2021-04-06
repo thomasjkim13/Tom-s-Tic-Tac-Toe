@@ -9,7 +9,7 @@ const gamesEvents = require('./games/events')
 $(() => {
   $('#sign-out').hide()
   $('#new-game').hide()
-  $('.container-box').hide()
+  $('.container').hide()
   // your JS code goes here
 
   $('#sign-up').on('submit', gamesEvents.onSignUp)
@@ -17,3 +17,5 @@ $(() => {
   $('#sign-out').on('click', gamesEvents.onSignOut)
   $('#new-game').on('click', gamesEvents.onNewGame)
 })
+
+
