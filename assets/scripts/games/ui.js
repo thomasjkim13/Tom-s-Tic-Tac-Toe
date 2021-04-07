@@ -24,7 +24,7 @@ const onSignInSuccess = function (response) {
   
   setTimeout (() => {
     $('#message').text('')
-  }, 1500)
+  }, 2500)
 
   $('#sign-in').trigger('reset')
 }
@@ -41,9 +41,10 @@ const onSignOutSuccess = function () {
   $('#new-game').hide()
   $('#message').text('You have signed out successfully!')
   $('.container').hide()
+  $('#turn-message').hide()
   setTimeout (() => {
     $('#message').text('')
-  }, 1500)
+  }, 2500)
 
   $('#sign-out').trigger('reset')
   store.user = null
@@ -58,12 +59,19 @@ const onNewGameRefresh = function (info) {
   console.log(info.game.cells)
   console.log(info.game._id)
   $('#new-game').trigger('reset')
+  $('#message').text('Play!!')
+  $('#box-cell').trigger('reset')
   $('.container').show()
+  setTimeout (() => {
+    $('#message').text('')
+  }, 3000)
 }
 
 const onNewGameFailure = function () {
   $('#new-game').trigger('reset')
 }
+
+
 
 module.exports = {
   onSignUpSuccess,

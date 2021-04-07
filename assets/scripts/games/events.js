@@ -1,4 +1,5 @@
 'use strict'
+const store = require('../store')
 const getFormFields = require('./../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
@@ -38,9 +39,34 @@ const onNewGame = function (event) {
     .catch(ui.onNewGameFailure)
 }
 
+let currentPlayer = 'X'
+const onClick = function(event) {
+  const box = $(event.target)
+  if (box.text() === '') {
+    box.text(currentPlayer)
+    currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
+  } else {
+    $('#turn-message').text('Box is filled already!')
+    $('#turn-message').addClass('PlayerTurn')
+    setTimeout(() => {
+      $('#turn-message').text('')
+      $('#turn-message').removeClass('PlayerTurn')
+    }, 2000)
+  }
+  if (currentPlayer === 'X') {
+    $('#turn-message').text("X's Turn")
+  } else if (currentPlayer === 'O') {
+    $('#turn-message').text("O's Turn")
+  }else {
+    
+  }
+
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
   onSignOut,
-  onNewGame
+  onNewGame,
+  onClick
 }
