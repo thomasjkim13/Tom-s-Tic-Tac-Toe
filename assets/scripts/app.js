@@ -10,12 +10,16 @@ $(() => {
   $('#sign-out').hide()
   $('#new-game').hide()
   $('.container').hide()
+  
+
   // your JS code goes here
 
   $('#sign-up').on('submit', gamesEvents.onSignUp)
   $('#sign-in').on('submit', gamesEvents.onSignIn)
   $('#sign-out').on('click', gamesEvents.onSignOut)
   $('#new-game').on('click', gamesEvents.onNewGame)
+
+  $('.box').on('click', gamesEvents.onClick)
 })
 
 

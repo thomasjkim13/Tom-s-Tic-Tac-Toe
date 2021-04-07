@@ -7,7 +7,7 @@ html {
     height: 100vh;
 }
 body {
-    background-color: #f4f1de;
+    background-color: #aed9e0;
     margin: 100px auto;
     min-height: 100%;
     width: 100%;
@@ -21,11 +21,20 @@ h1 {
     font-family: New Tegomin, sans-serif;
     align-content: center;
     justify-content: center;
+    font-weight: bold;
 }
 
 #message {
     text-align: center;
     font-family: Cabin, sans-serif;
+    font-size: 1.2rem;
+}
+
+#turn-message {
+    text-align: center;
+    font-family: Cabin, sans-serif;
+    font-size: 1.3rem;
+    margin-top: 20px;
 }
 
 #sign-in {
@@ -66,7 +75,7 @@ h1 {
 }
 
 .board {
-    margin: 100px auto;
+    margin: 20px auto;
     max-height: calc(100vh - 500px);
     max-width: calc(100vh - 500px);
 }
@@ -90,6 +99,8 @@ h1 {
     align-items: center;
 
     &:hover {
-        background-color: #1d3557;
+        background-color: #373f51;
+        opacity: .6;
     }
+    font-size: 7vh;
 }
