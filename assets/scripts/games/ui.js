@@ -15,20 +15,15 @@ const onSignInSuccess = function (response) {
   $('#new-game').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
-
   console.log(response)
   // save user to our store object
   store.user = response.user
-
   $('#message').text(response.user.email + ' signed in successfully!')
-  
-  setTimeout (() => {
+  setTimeout(() => {
     $('#message').text('')
   }, 2500)
-
   $('#sign-in').trigger('reset')
 }
-
 
 const onSignInFailure = function () {
   $('#message').text('Sign in failed')
@@ -42,7 +37,7 @@ const onSignOutSuccess = function () {
   $('#message').text('You have signed out successfully!')
   $('.container').hide()
   $('#turn-message').hide()
-  setTimeout (() => {
+  setTimeout(() => {
     $('#message').text('')
   }, 2500)
 
@@ -54,15 +49,12 @@ const onSignOutFailure = function () {
   $('#message').text('You failed signing out')
 }
 
-const onNewGameRefresh = function (info) {
-  store.game = info.game
-  console.log(info.game.cells)
-  console.log(info.game._id)
+const onNewGameRefresh = function (response) {
+  store.game = response.game
   $('#new-game').trigger('reset')
   $('#message').text('Play!!')
-  $('#box-cell').trigger('reset')
   $('.container').show()
-  setTimeout (() => {
+  setTimeout(() => {
     $('#message').text('')
   }, 3000)
 }
@@ -71,7 +63,9 @@ const onNewGameFailure = function () {
   $('#new-game').trigger('reset')
 }
 
-
+const onUpdateGameFailure = function () {
+  $('#turn-message').text('Box is filled already!')
+}
 
 module.exports = {
   onSignUpSuccess,
@@ -81,5 +75,6 @@ module.exports = {
   onSignOutSuccess,
   onSignOutFailure,
   onNewGameRefresh,
-  onNewGameFailure
+  onNewGameFailure,
+  onUpdateGameFailure
 }

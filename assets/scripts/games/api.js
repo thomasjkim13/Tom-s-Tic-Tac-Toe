@@ -28,6 +28,7 @@ const signOut = function () {
   })
 }
 
+// HEY API, I need something from you
 const newGame = function () {
   return $.ajax({
     method: 'POST',
@@ -38,9 +39,29 @@ const newGame = function () {
   })
 }
 
+const updateGame = function (index, value) {
+  return $.ajax({
+    method: 'PATCH', 
+    url: config.apiUrl + '/games/' + store.game._id,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
+    data: {
+      "game": {
+        "cell": {
+          "index": index,
+          "value": value
+        },
+        "over": false
+      }
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   signOut,
-  newGame
+  newGame,
+  updateGame
 }

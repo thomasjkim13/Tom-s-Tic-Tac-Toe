@@ -4,13 +4,14 @@
 @import '~bootstrap/scss/bootstrap';
 
 html {
-    height: 100vh;
+  height: 100vh;
 }
+
 body {
-    background-color: #aed9e0;
-    margin: 100px auto;
-    min-height: 100%;
-    width: 100%;
+  background-color: #aed9e0;
+  margin: 100px auto;
+  min-height: 100%;
+  width: 100%;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -25,82 +26,82 @@ h1 {
 }
 
 #message {
-    text-align: center;
-    font-family: Cabin, sans-serif;
-    font-size: 1.2rem;
+  text-align: center;
+  font-family: Cabin, sans-serif;
+  font-size: 1.2rem;
 }
 
 #turn-message {
-    text-align: center;
-    font-family: Cabin, sans-serif;
-    font-size: 1.3rem;
-    margin-top: 20px;
+  text-align: center;
+  font-family: Cabin, sans-serif;
+  font-size: 1.3rem;
+  margin-top: 20px;
 }
 
 #sign-in {
-    flex-direction: column;
-    margin-top: 50px;
-    justify-content: center;
-    align-items: center;
-    
+  flex-direction: column;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+
 }
 
 #sign-up {
-    flex-direction: column;
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 #sign-out {
-    flex-direction: column;
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 #new-page {
-    flex-direction: column;
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    height: 100vh;
-    cursor: pointer;
-    min-height: 100%;
-    width: 100%;
-   
+  height: 100vh;
+  cursor: pointer;
+  min-height: 100%;
+  width: 100%;
+
 }
 
 .board {
-    margin: 20px auto;
-    max-height: calc(100vh - 500px);
-    max-width: calc(100vh - 500px);
+  margin: 20px auto;
+  max-height: calc(100vh - 500px);
+  max-width: calc(100vh - 500px);
 }
 
 .box {
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    &:nth-child(3n) {
-        border-right: 0;
-    }
-    &:nth-last-child(-1n + 3) {
-        border-bottom: 0;
-    }
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  &:nth-child(3n) {
+    border-right: 0;
+  }
+  &:nth-last-child(-1n + 3) {
+      border-bottom: 0;
+  }
     // Set the minimum height for each box
-    min-height: calc(100% / 3);
-    // Center the text (x's and o's inside the board
-    display: flex;
-    // set the content posititon along the main axis (left to right)
-    justify-content: center;
-    // set the conts position along the cross axis 
-    align-items: center;
+  min-height: calc(100% / 3);
+  // Center the text (x's and o's inside the board
+  display: flex;
+  // set the content posititon along the main axis (left to right)
+  justify-content: center;
+  // set the conts position along the cross axis
+  align-items: center;
 
-    &:hover {
-        background-color: #373f51;
-        opacity: .6;
-    }
-    font-size: 7vh;
+  &:hover {
+    background-color: #373f51;
+    opacity: .6;
+  }
+  font-size: 7vh;
 }
