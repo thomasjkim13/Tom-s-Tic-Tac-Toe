@@ -57,7 +57,7 @@ const onClick = function (event) {
   }
  const value = box.text()
  const index = store.game.cells
-  console.log(store.game)
+ console.log(store.game)
 
   checkWin()
 
@@ -77,9 +77,20 @@ const checkWin = function () {
     ( store.game.cells[2] === store.game.cells[5] && store.game.cells[5] === store.game.cells[8] && store.game.cells[2] !== '' ) ||
     ( store.game.cells[0] === store.game.cells[4] && store.game.cells[4] === store.game.cells[8] && store.game.cells[0] !== '' ) ||
     ( store.game.cells[2] === store.game.cells[4] && store.game.cells[4] === store.game.cells[6] && store.game.cells[2] !== '' )
-
-    ) {
-    console.log('Winner')
+  ){
+    $('#turn-message').text("Winner!!")
+    setTimeout(() => {
+      $('#turn-message').text('')
+    }, 2000)
+  } else if (
+    ( store.game.cells[0] && store.game.cells[1] && store.game.cells[2] && store.game.cells[3] && store.game.cells[4] && store.game.cells[5] && store.game.cells[6] && store.game.cells[7] && store.game.cells[8]  ) 
+  ) {
+    $('#turn-message').text("Game Tied!")
+    setTimeout(() => {
+      $('#turn-message').text('')
+    }, 2000)
+  } else {
+    updateGame.data.over = false
   }
 }
 
