@@ -10,7 +10,6 @@ $(() => {
   $('#sign-out').hide()
   $('#new-game').hide()
   $('.container').hide()
-  
 
   // your JS code goes here
 
@@ -21,5 +20,3 @@ $(() => {
 
   $('.box').on('click', gamesEvents.onClick)
 })
-
-
