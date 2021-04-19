@@ -15,7 +15,7 @@ const onSignInSuccess = function (response) {
   $('#new-game').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
-  console.log(response)
+  
   // save user to our store object
   store.user = response.user
   $('#message').text(response.user.email + ' signed in successfully!')
@@ -52,6 +52,7 @@ const onSignOutFailure = function () {
 const onNewGameRefresh = function (response) {
   store.game = response.game
   $('#new-game').trigger('reset')
+  $('.box').empty()
   $('#message').text('Play!!')
   $('.container').show()
   setTimeout(() => {

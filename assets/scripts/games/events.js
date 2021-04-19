@@ -1,4 +1,5 @@
 'use strict'
+const { data } = require('jquery')
 const store = require('../store')
 const getFormFields = require('./../../../lib/get-form-fields')
 const api = require('./api')
@@ -41,11 +42,13 @@ const onNewGame = function (event) {
 
 let currentPlayer = 'X'
 const onClick = function (event) {
-  const box = $(event.target)
-  if (box.text() === '') {
-    box.text(currentPlayer)
+  const box = event.target
+  if ($(box).text() === '') {
+    $(box).text(currentPlayer)
     currentPlayer = currentPlayer === 'X' ? 'O' : 'X'
   } else {
+    store.game.cells = true
+    $('#turn-message').text('Box is filled already!')
     setTimeout(() => {
       $('#turn-message').text('')
     }, 2000)
@@ -55,7 +58,7 @@ const onClick = function (event) {
   } else if (currentPlayer === 'O') {
     $('#turn-message').text("O's Turn")
   }
- const value = box.text()
+ const value = $(box).text()
  const index = store.game.cells
  console.log(store.game)
 
@@ -90,7 +93,7 @@ const checkWin = function () {
       $('#turn-message').text('')
     }, 2000)
   } else {
-    updateGame.data.over = false
+    store.game.cells = false
   }
 }
 
