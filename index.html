@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Tom's Tic Tiac Toe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    
+    <body>
+      <h1 class="row" id="header">Tom's Tic Tac Toe</h1>
+      <p id="message"></p>
+      <form class="row" id="sign-in">
+        <input type="email" name="credentials[email]" placeholder="email"> </br>
+        <input type="password" name="credentials[password]" placeholder="password"> </br>
+        <input type="submit" class="btn btn-outline-dark" value="Sign In"/>
+      </form>
+      <form class="row" id="sign-up">
+        <input type="email" name="credentials[email]" placeholder="email"> </br>
+        <input type="password" name="credentials[password]" placeholder="password"> </br>
+        <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation"><br>
+        <input type="Submit" class="btn btn-outline-dark" value="Sign Up">
+      </form>
+      
+      <section class="row" id='new-page'>
+        <button id='new-game' class="btn btn-outline-dark"> New Game </button>
+        <button id='sign-out' class="btn btn-outline-dark"> Sign Out </button>
+      </section>
+      
+      <p id="turn-message"></p>
+
+      <section class="container">
+        <div class="row h-100 board">
+          <div class="col-4 col-md-4 box"></div>
+          <div class="col-4 col-md-4 box"></div>
+          <div class="col-4 col-md-4 box"></div>
+        
+          <div class="col-4 col-md-4 box"></div>
+          <div class="col-4 col-md-4 box"></div>
+          <div class="col-4 col-md-4 box"></div>
+        
+          <div class="col-4 col-md-4 box"></div>
+          <div class="col-4 col-md-4 box"></div>
+          <div class="col-4 col-md-4 box"></div>
+        </div>
+      </section>
+    </body>
+</html>
